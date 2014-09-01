@@ -1,0 +1,22 @@
+<html>
+<head>
+<script>
+function getUrlParam(name)
+{
+  var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+  var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+  if (r!=null) return unescape(r[2]); return null; //返回参数值
+}
+
+alert(getUrlParam(tx));
+</script> 
+</head>
+<body>
+<form method=post action="https://www.sandbox.paypal.com/cgi-bin/webscr"> 
+<input type="hidden" name="cmd" value="_notify-synch"> 
+<input type="hidden" name="tx" value="6UM12148T17778645"> 
+<input type="hidden" name="at" value="lQNQD0Sxu0egCy-irX_CoCSyGbWmgJeytBNbZS-QFgV9IhNZqVZCRP03jOu"> 
+<input type="submit" value="PDT"> 
+</form> 
+</body>
+</html>
