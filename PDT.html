@@ -7,13 +7,13 @@ function getUrlParam(name)
   var r = window.location.search.substr(1).match(reg);
   if (r!=null) return unescape(r[2]); return null; 
 }
-alert(getUrlParam('tx'));
+document.getElementById("tx").value = getUrlParam('tx');
 </script> 
 </head>
 <body>
 <form method=post action="https://www.sandbox.paypal.com/cgi-bin/webscr"> 
 <input type="hidden" name="cmd" value="_notify-synch"> 
-<input type="hidden" name="tx" value="6UM12148T17778645"> 
+<input type="hidden" id="tx" name="tx" value=""> 
 <input type="hidden" name="at" value="lQNQD0Sxu0egCy-irX_CoCSyGbWmgJeytBNbZS-QFgV9IhNZqVZCRP03jOu"> 
 <input type="submit" value="PDT"> 
 </form> 
