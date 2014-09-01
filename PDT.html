@@ -7,7 +7,6 @@ function getUrlParam(name)
   var r = window.location.search.substr(1).match(reg);
   if (r!=null) return unescape(r[2]); return null; 
 }
-document.getElementById("tx").value = getUrlParam('tx');
 </script> 
 </head>
 <body>
@@ -17,5 +16,8 @@ document.getElementById("tx").value = getUrlParam('tx');
 <input type="hidden" name="at" value="lQNQD0Sxu0egCy-irX_CoCSyGbWmgJeytBNbZS-QFgV9IhNZqVZCRP03jOu"> 
 <input type="submit" value="PDT"> 
 </form> 
+<script>
+  document.getElementById("tx").value = getUrlParam('tx');
+</script> 
 </body>
 </html>
